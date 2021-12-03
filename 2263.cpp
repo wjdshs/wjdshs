@@ -7,7 +7,7 @@ int n;
 void func(int s, int e, int s2, int e2){
     if(s > e) return; 
     int root = postorder[e2];
-    printf("%d", root);
+    printf("%d ", root);
     int pos = find_root[root];
     func(s, pos - 1, s2, s2 + (pos - 1 - s));
     func(pos + 1, e, s2 + pos - s, e2 - 1); 
